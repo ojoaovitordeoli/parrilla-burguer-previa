@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Cardápio</title>
+  <meta name="description" content="Faça seu pedido e envie pelo WhatsApp.">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="pular" href="#cardapio">Ir para o cardápio</a>
+  <div id="demo" class="demo" hidden></div>
+
+  <header class="topo" id="topo">
+    <div class="capa" id="capa"></div>
+    <div class="marca">
+      <div class="logo" id="logo" aria-hidden="true"></div>
+      <div class="marca-texto">
+        <h1 id="nome-loja"></h1>
+        <p id="slogan" class="slogan"></p>
+        <div class="info" id="info"></div>
+      </div>
+    </div>
+    <p class="aviso" id="aviso" hidden></p>
+  </header>
+
+  <nav class="abas" id="abas" aria-label="Categorias"></nav>
+
+  <main id="cardapio" class="cardapio">
+    <label class="busca">
+      <span class="sr">Buscar no cardápio</span>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.5 3a7.5 7.5 0 0 1 5.9 12.1l4.7 4.7-1.4 1.4-4.7-4.7A7.5 7.5 0 1 1 10.5 3Zm0 2a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11Z"/></svg>
+      <input id="busca" type="search" placeholder="Buscar" autocomplete="off">
+    </label>
+    <div id="lista"></div>
+    <p id="vazio-busca" class="vazio" hidden>Nada encontrado com esse nome.</p>
+  </main>
+
+  <footer class="rodape" id="rodape"></footer>
+
+  <div class="barra-carrinho" id="barra" hidden>
+    <button type="button" id="abrir-carrinho" class="botao-principal largo">
+      <span id="barra-qtd" class="bolha"></span>
+      <span id="barra-rotulo">Ver pedido</span>
+      <span id="barra-total"></span>
+    </button>
+  </div>
+
+  <dialog id="dlg-produto" class="folha" aria-labelledby="prod-nome"></dialog>
+  <dialog id="dlg-carrinho" class="folha" aria-labelledby="carrinho-titulo"></dialog>
+  <dialog id="dlg-final" class="folha" aria-labelledby="final-titulo"></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="config.js"></script>
+  <script src="pix.js"></script>
+  <script src="loja.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
